@@ -1,7 +1,12 @@
 package com.example.easysub;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,10 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn;
-        btn = (Button)findViewById(R.id.login_button);
+        Button btn_login, btn_signup;
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn_login = (Button)findViewById(R.id.login_button);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LogInActivity.class));
+            }
+        });
+
+        btn_signup = (Button)findViewById(R.id.signup_button);
+        btn_signup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, LogInActivity.class));
             }
