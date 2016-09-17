@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "32489662786",
+    "firebase_url": "https://sublet-app.firebaseio.com",
+    "project_id": "sublet-app",
+    "storage_bucket": "sublet-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32489662786:android:beccec6fbad2e47f",
+        "android_client_info": {
+          "package_name": "com.example.easysub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32489662786-5npbsteub5v2la2pmdos823vbskm6rnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlWhFo1MYzOKUXh6RFxnqV3Pba5rg-dPU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
