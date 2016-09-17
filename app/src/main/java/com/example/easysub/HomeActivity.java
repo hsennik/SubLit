@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
        Button btn_search = (Button)findViewById(R.id.search_button);
        Button btn_favourites = (Button)findViewById(R.id.favourites_button);
        Button btn_mypostings = (Button)findViewById(R.id.mypostings_button);
-      Button btn_settings = (Button)findViewById(R.id.settings_button);
+       Button btn_settings = (Button)findViewById(R.id.settings_button);
 
       //CLICK LISTENER FOR ALL BUTTONS
       btn_search.setOnClickListener(this);
