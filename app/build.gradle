@@ -1,8 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
+
+    dexOptions{
+        javaMaxHeapSize "4g"
+    }
 
     defaultConfig {
         applicationId "com.example.easysub"
@@ -10,6 +15,7 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {

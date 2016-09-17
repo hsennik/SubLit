@@ -20,7 +20,7 @@ public class SearchActivity extends AppCompatActivity {
 
         Button btn_search;
 
-        btn_search = (Button)findViewById(R.id.search_button);
+        btn_search = (Button)findViewById(R.id.map_button);
         btn_search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(new Intent(SearchActivity.this, MapsActivity.class));

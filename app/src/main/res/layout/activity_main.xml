@@ -20,7 +20,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log In"
+        android:text="jkehgve In"
         android:id="@+id/login_button"
         android:layout_marginTop="66dp"
         android:layout_below="@+id/textView"
