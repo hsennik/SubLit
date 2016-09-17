@@ -7,34 +7,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="FAVOURITE SUBLETS"
-        android:id="@+id/textView5"
+        android:text="MY SUBLETS"
+        android:id="@+id/textView7"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07" />
+        android:layout_weight="0.04"
+        android:fontFamily="@string/abc_font_family_button_material"
+        android:singleLine="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1 Lester Street"
-        android:id="@+id/button5"
+        android:text="SUBLET 1"
+        android:id="@+id/button9"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07" />
-
-    <Button
-        android:layout_width="383dp"
-        android:layout_height="wrap_content"
-        android:text="2 Lester Street"
-        android:id="@+id/button6"
-        android:layout_gravity="right"
-        android:layout_weight="0.07" />
+        android:layout_weight="0.22" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3 Lester Street"
-        android:id="@+id/button7"
+        android:text="SUBLET 2"
+        android:id="@+id/button8"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07" />
+        android:layout_weight="0.22" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBLET 3"
+        android:id="@+id/button10"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.22" />
 
 </LinearLayout>

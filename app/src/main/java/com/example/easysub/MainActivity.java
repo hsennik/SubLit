@@ -16,21 +16,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Button btn_login = (Button)findViewById(R.id.login_button);
-        Button btn_signup = (Button)findViewById(R.id.signup_button);
-
         btn_login.setOnClickListener(this);
-        btn_signup.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
-        switch(v.getID()){
+        switch(v.getId()){
             case R.id.login_button:
                 startActivity(new Intent(MainActivity.this, LogInActivity.class));
-                break;
-            case R.id.signup_button:
-                startActivity(new Intent(MainActivity.this, SignInActivity.class));
-                break;
         }
     }
 }
