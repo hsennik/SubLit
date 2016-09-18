@@ -11,7 +11,7 @@ import android.view.View;
 /**
  * Created by hsenn on 2016-09-17.
  */
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
