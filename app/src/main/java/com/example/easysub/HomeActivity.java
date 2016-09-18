@@ -9,20 +9,43 @@ import android.widget.Button;
 /**
  * Created by Lenavo on 2016-09-17.
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_home);
 
-        Button btn_search;
+       //DECLARING  BUTTONS
+       Button btn_search = (Button)findViewById(R.id.search_button);
+       Button btn_favourites = (Button)findViewById(R.id.favourites_button);
+       Button btn_mypostings = (Button)findViewById(R.id.mypostings_button);
+       Button btn_settings = (Button)findViewById(R.id.settings_button);
 
-        btn_search = (Button)findViewById(R.id.search_button);
-        btn_search.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+      //CLICK LISTENER FOR ALL BUTTONS
+      btn_search.setOnClickListener(this);
+      btn_favourites.setOnClickListener(this);
+      btn_mypostings.setOnClickListener(this);
+      btn_settings.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v){
+
+        //DETERMINE WHICH BUTTON WAS CLICKED AND ROUTE TO THE ACCORDING ACTIVITY PAGE
+        switch(v.getId()){
+            case R.id.search_button:
                 startActivity(new Intent(HomeActivity.this, SearchActivity.class));
-            }
-        });
-
+                break;
+            case R.id.favourites_button:
+                startActivity(new Intent(HomeActivity.this, FavouritesActivity.class));
+                break;
+            case R.id.mypostings_button:
+                startActivity(new Intent(HomeActivity.this, MyPostingsActivity.class));
+                break;
+            case R.id.settings_button:
+                startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
+                break;
+        }
     }
 }
