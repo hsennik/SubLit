@@ -8,10 +8,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="EasySub"
+        android:text="MENU"
         android:id="@+id/textView4"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07" />
+        android:layout_gravity="center_horizontal" />
 
 
 
@@ -21,28 +20,29 @@
         android:layout_height="wrap_content"
         android:text="SEARCH"
         android:id="@+id/search_button"
+        android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_weight="0.08" />
+        android:layout_weight="0.25" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="FAVOURITES"
         android:id="@+id/favourites_button"
-        android:layout_weight="0.07" />
+        android:layout_weight="0.25" />
 
     <Button
         android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:text="MY POSTINGS"
         android:id="@+id/mypostings_button"
-        android:layout_weight="0.07" />
+        android:layout_weight="0.25" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SETTINGS"
         android:id="@+id/settings_button"
-        android:layout_weight="0.08" />
+        android:layout_weight="0.25" />
 
 </LinearLayout>
