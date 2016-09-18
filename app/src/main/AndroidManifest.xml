@@ -31,6 +31,7 @@
         <activity android:name=".MyPostingsActivity"></activity>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".PostingActivity"></activity>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

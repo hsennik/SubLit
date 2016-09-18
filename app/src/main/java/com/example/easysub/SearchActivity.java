@@ -41,7 +41,7 @@ public class SearchActivity extends AppCompatActivity  {
             public void onClick(View view) {
             EditText rentPrice  = (EditText)findViewById(R.id.editText);
             EditText numberPeople = (EditText)findViewById(R.id.editText2);
-            decidingvar=4;
+            decidingvar=1;
             CheckBox furnished = (CheckBox)findViewById(R.id.checkBox);
             if(furnished.isChecked()) {
                 decidingvar=1;
@@ -52,23 +52,23 @@ public class SearchActivity extends AppCompatActivity  {
             }
             CheckBox parking = (CheckBox)findViewById(R.id.checkBox3);
             if (parking.isChecked()){
-                decidingvar=2;
+                decidingvar=3;
             }
             CheckBox laundry = (CheckBox)findViewById(R.id.checkBox4);
             if (laundry.isChecked()){
-                decidingvar=2;
+                decidingvar=4;
             }
             RadioButton wlu = (RadioButton)findViewById(R.id.radioButton);
             if (wlu.isChecked()){
-                decidingvar=2;
+                decidingvar=4;
             }
             RadioButton uw = (RadioButton)findViewById(R.id.radioButton2);
             if (uw.isChecked()) {
-                decidingvar=1;
+                decidingvar=2;
             }
             RadioButton uptown = (RadioButton)findViewById(R.id.radioButton3);
             if(uptown.isChecked()) {
-                decidingvar = 3;
+                decidingvar = 5;
             }
             startActivity(new Intent(SearchActivity.this, MapsActivity.class));
             }
