@@ -33,10 +33,26 @@ public class FavouritesActivity extends Activity {
         listView = (ListView) findViewById(R.id.list);
 
         // Defined Array values to show in ListView
-        String[] favSubletsName = new String[] { "Address","Address","Address","Address","Address"};
-        Boolean [] favSubletsBool = new Boolean[]{true,false,false,true,false,};  //HARD CODED FAVOURITES, CHANGE TO MODIFY BASED ON USER INPUT IN SEARCH TAB
-       // String[] favSubletsName;
+        String[] sublets = new String[] { "Address","Address","Address","Address","Address"};
+        Boolean [] favSublets = new Boolean[]{true,false,false,true,false,};  //HARD CODED FAVOURITES, CHANGE TO MODIFY BASED ON USER INPUT IN SEARCH TAB
 
+
+        int arrSize = 0;
+        for (int i = 0; i < 5; i++){
+            //Determine size of array to convert into a list
+            if (favSublets[i]){
+                arrSize++;
+            }
+        }
+        //Create array of size "arrSize"
+        String[] favSubletsName = new String[arrSize];
+        for (int i = 0; i < 5; i++){
+            if (favSublets[i]){
+                //Add addresses marked as favourite, due to corresponding boolean array to fav Sublets array
+                favSubletsName[i]=sublets[i];
+            }
+        }
+        arrSize = 0; //set count back to 0 to be valid for re-use
 
         // Define a new Adapter
         // First parameter - Context
