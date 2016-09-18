@@ -37,6 +37,8 @@ public class MapsFragment extends Fragment {
             e.printStackTrace();
         }
 
+        decidingvar = 5;
+
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap mMap) {
@@ -68,7 +70,7 @@ public class MapsFragment extends Fragment {
                     Marker m1 = googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
                     cameraPosition = new CameraPosition.Builder().target(laurier).zoom(12).build();
                 }
-                if(decidingvar==3){
+                if(decidingvar==5){
                     LatLng uptown = new LatLng(43.472130, 80.525179);
                     Marker m1 = googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));
                     cameraPosition = new CameraPosition.Builder().target(uptown).zoom(12).build();
