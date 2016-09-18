@@ -59,14 +59,8 @@ public class SearchActivity extends AppCompatActivity  {
             CheckBox laundry = (CheckBox)findViewById(R.id.checkBox4);
             if (laundry.isChecked()){
                 Global.decidingvar=4;
-            }else{
-                Global.decidingvar=6;
-            }
-            RadioButton wlu = (RadioButton)findViewById(R.id.radioButton);
-            if (wlu.isChecked()){
-                Global.decidingvar=4;
-            }else{
-                Global.decidingvar=6;
+            }else {
+                Global.decidingvar = 6;
             }
             RadioButton uw = (RadioButton)findViewById(R.id.radioButton2);
             if (uw.isChecked()) {
@@ -77,6 +71,12 @@ public class SearchActivity extends AppCompatActivity  {
             RadioButton uptown = (RadioButton)findViewById(R.id.radioButton3);
             if(uptown.isChecked()) {
                 Global.decidingvar = 5;
+            }else{
+                Global.decidingvar=6;
+            }
+            RadioButton wlu = (RadioButton)findViewById(R.id.radioButton);
+            if (wlu.isChecked()){
+                Global.decidingvar=4;
             }else{
                 Global.decidingvar=6;
             }
