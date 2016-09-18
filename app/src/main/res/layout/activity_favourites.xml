@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="16 Ezra Avenue"
-        android:id="@+id/button2"
+        android:id="@+id/ezra_button"
         android:layout_weight="0.06" />
 
     <Button

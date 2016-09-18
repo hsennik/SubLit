@@ -21,49 +21,11 @@ public class FavouritesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
 
-        // Get ListView object from xml
-        listView = (ListView) findViewById(R.id.list);
+        Button btn_ezra = (Button) findViewById(R.id.ezra_button);
+        btn_ezra.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                startActivity(new Intent(FavouritesActivity.this, PostingActivity.class));}
+            });
+        }
 
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "17 Young Street East",
-                "16 Ezra Street",
-                "203 Lester Sreet"
-        };
-
-        // Define a new Adapter
-        // First parameter - Context
-        // Second parameter - Layout for the row
-        // Third parameter - ID of the TextView to which the data is written
-        // Forth - the Array of data
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-
-
-        // Assign adapter to ListView
-        listView.setAdapter(adapter);
-
-        // ListView Item Click Listener
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                // ListView Clicked item index
-                int itemPosition     = position;
-
-                // ListView Clicked item value
-                String  itemValue    = (String) listView.getItemAtPosition(position);
-
-                // Show Alert
-                Toast.makeText(getApplicationContext(),
-                        "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
-                        .show();
-
-            }
-
-        });
     }
-
-}
