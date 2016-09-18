@@ -50,7 +50,6 @@ public class MapsFragment extends Fragment {
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
         });
-
         return rootView;
     }
 
