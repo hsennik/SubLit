@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragment extends Fragment {
-
+    public static int decidingvar;
     MapView mMapView;
     private GoogleMap googleMap;
 
@@ -40,31 +40,34 @@ public class MapsFragment extends Fragment {
             @Override
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
-
-                //if this is checked
+                LatLng uwaterloo = new LatLng(43.4723, -80.5449);
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
+                if (decidingvar==1) {
                     // For dropping a marker at a point on the Map
-                    LatLng uwaterloo = new LatLng(43.4723, -80.5449);
+                    // uwaterloo = new LatLng(43.4723, -80.5449);
                     googleMap.addMarker(new MarkerOptions().position(uwaterloo).title("University of Waterloo").snippet("FOR RENT"));
                     // For zooming automatically to the location of the marker
-                    CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
-               // else if this is checked
-                    LatLng lester = new LatLng(43.472745,80.533844);
+                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
+                    LatLng lester = new LatLng(43.472745, 80.533844);
                     googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
                     // For zooming automatically to the location of the marker
-                   // CameraPosition cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();
-                //else if this is checked
-                    LatLng laurier = new LatLng(43.472130,80.525179);
-                    googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
-                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(laurier).zoom(12).build();
-                //else if this is checked
-                    LatLng uptown = new LatLng(43.472130,80.525179);
-                    googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));// For zooming automatically to the location of the marker
-                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(uptown).zoom(12).build();
-                //else
+                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();}
                     LatLng keats = new LatLng(43.472130,80.525179);
                     googleMap.addMarker(new MarkerOptions().position(keats).title("111 Keats Way Place").snippet("Nice place"));// For zooming automatically to the location of the marker
                     //CameraPosition cameraPosition = new CameraPosition.Builder().target(keats).zoom(12).build();
-                //end
+                }
+                if(decidingvar==2) {
+                    //else if this is checked
+                    LatLng laurier = new LatLng(43.472130, 80.525179);
+                    googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
+                    cameraPosition = new CameraPosition.Builder().target(laurier).zoom(12).build();
+                }
+                if(decidingvar==3){
+                    LatLng uptown = new LatLng(43.472130, 80.525179);
+                    googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));
+                    cameraPosition = new CameraPosition.Builder().target(uptown).zoom(12).build();
+                    // For zooming automatically to the location of the marker
+                }
 
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }

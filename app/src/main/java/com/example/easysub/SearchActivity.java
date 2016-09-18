@@ -18,6 +18,9 @@ import java.util.zip.CheckedInputStream;
  * Created by hsenn on 2016-09-17.
  */
 public class SearchActivity extends AppCompatActivity  {
+
+    public static int decidingvar;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
@@ -38,13 +41,35 @@ public class SearchActivity extends AppCompatActivity  {
             public void onClick(View view) {
             EditText rentPrice  = (EditText)findViewById(R.id.editText);
             EditText numberPeople = (EditText)findViewById(R.id.editText2);
+            decidingvar=4;
             CheckBox furnished = (CheckBox)findViewById(R.id.checkBox);
+            if(furnished.isChecked()) {
+                decidingvar=1;
+            }
             CheckBox utilities = (CheckBox)findViewById(R.id.checkBox2);
+            if (utilities.isChecked()){
+                decidingvar=2;
+            }
             CheckBox parking = (CheckBox)findViewById(R.id.checkBox3);
+            if (parking.isChecked()){
+                decidingvar=2;
+            }
             CheckBox laundry = (CheckBox)findViewById(R.id.checkBox4);
+            if (laundry.isChecked()){
+                decidingvar=2;
+            }
             RadioButton wlu = (RadioButton)findViewById(R.id.radioButton);
+            if (wlu.isChecked()){
+                decidingvar=2;
+            }
             RadioButton uw = (RadioButton)findViewById(R.id.radioButton2);
+            if (uw.isChecked()) {
+                decidingvar=1;
+            }
             RadioButton uptown = (RadioButton)findViewById(R.id.radioButton3);
+            if(uptown.isChecked()) {
+                decidingvar = 3;
+            }
             startActivity(new Intent(SearchActivity.this, MapsActivity.class));
             }
         });
