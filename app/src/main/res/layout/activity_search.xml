@@ -95,7 +95,6 @@
             android:text="Near Uptown"
             android:id="@+id/radioButton3"
             android:layout_gravity="center_horizontal" />
-        
     </RadioGroup>
 
     <Button

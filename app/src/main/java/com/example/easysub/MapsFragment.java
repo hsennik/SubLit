@@ -14,6 +14,7 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragment extends Fragment {
@@ -44,27 +45,32 @@ public class MapsFragment extends Fragment {
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
                 if (decidingvar==1) {
                     // For dropping a marker at a point on the Map
-                    // uwaterloo = new LatLng(43.4723, -80.5449);
-                    googleMap.addMarker(new MarkerOptions().position(uwaterloo).title("University of Waterloo").snippet("FOR RENT"));
+                    uwaterloo = new LatLng(43.4723, -80.5449);
+                    Marker m1 = googleMap.addMarker(new MarkerOptions().position(uwaterloo).title("University of Waterloo").snippet("FOR RENT"));
+                    LatLng lester = new LatLng(43.472745, 80.533844);
+                    Marker m2 = googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
                     // For zooming automatically to the location of the marker
                     //CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
-                    LatLng lester = new LatLng(43.472745, 80.533844);
-                    googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
-                    // For zooming automatically to the location of the marker
-                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();}
-                    LatLng keats = new LatLng(43.472130,80.525179);
-                    googleMap.addMarker(new MarkerOptions().position(keats).title("111 Keats Way Place").snippet("Nice place"));// For zooming automatically to the location of the marker
-                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(keats).zoom(12).build();
                 }
-                if(decidingvar==2) {
+                if (decidingvar==2){
+                    LatLng lester = new LatLng(43.472745, 80.533844);
+                    Marker m1 = googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
+                    // For zooming automatically to the location of the marker
+                    cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();}
+                if(decidingvar==3){
+                    LatLng keats = new LatLng(43.472130,80.525179);
+                    Marker m1 = googleMap.addMarker(new MarkerOptions().position(keats).title("111 Keats Way Place").snippet("Nice place"));// For zooming automatically to the location of the marker
+                    cameraPosition = new CameraPosition.Builder().target(keats).zoom(12).build();
+                }
+                if(decidingvar==4) {
                     //else if this is checked
                     LatLng laurier = new LatLng(43.472130, 80.525179);
-                    googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
+                    Marker m1 = googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
                     cameraPosition = new CameraPosition.Builder().target(laurier).zoom(12).build();
                 }
                 if(decidingvar==3){
                     LatLng uptown = new LatLng(43.472130, 80.525179);
-                    googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));
+                    Marker m1 = googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));
                     cameraPosition = new CameraPosition.Builder().target(uptown).zoom(12).build();
                     // For zooming automatically to the location of the marker
                 }
