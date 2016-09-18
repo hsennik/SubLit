@@ -18,9 +18,6 @@ import java.util.zip.CheckedInputStream;
  * Created by hsenn on 2016-09-17.
  */
 public class SearchActivity extends AppCompatActivity  {
-
-    public static int decidingvar;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
@@ -41,34 +38,47 @@ public class SearchActivity extends AppCompatActivity  {
             public void onClick(View view) {
             EditText rentPrice  = (EditText)findViewById(R.id.editText);
             EditText numberPeople = (EditText)findViewById(R.id.editText2);
-            decidingvar=1;
+            Global.decidingvar=1;
             CheckBox furnished = (CheckBox)findViewById(R.id.checkBox);
             if(furnished.isChecked()) {
-                decidingvar=1;
-            }
+                Global.decidingvar=1;
+            }else{
+            Global.decidingvar=6;}
             CheckBox utilities = (CheckBox)findViewById(R.id.checkBox2);
             if (utilities.isChecked()){
-                decidingvar=2;
+                Global.decidingvar=2;
+            }else{
+                Global.decidingvar=6;
             }
             CheckBox parking = (CheckBox)findViewById(R.id.checkBox3);
             if (parking.isChecked()){
-                decidingvar=3;
+                Global.decidingvar=3;
+            }else{
+                Global.decidingvar=6;
             }
             CheckBox laundry = (CheckBox)findViewById(R.id.checkBox4);
             if (laundry.isChecked()){
-                decidingvar=4;
+                Global.decidingvar=4;
+            }else{
+                Global.decidingvar=6;
             }
             RadioButton wlu = (RadioButton)findViewById(R.id.radioButton);
             if (wlu.isChecked()){
-                decidingvar=4;
+                Global.decidingvar=4;
+            }else{
+                Global.decidingvar=6;
             }
             RadioButton uw = (RadioButton)findViewById(R.id.radioButton2);
             if (uw.isChecked()) {
-                decidingvar=2;
+                Global.decidingvar=2;
+            }else{
+                Global.decidingvar=6;
             }
             RadioButton uptown = (RadioButton)findViewById(R.id.radioButton3);
             if(uptown.isChecked()) {
-                decidingvar = 5;
+                Global.decidingvar = 5;
+            }else{
+                Global.decidingvar=6;
             }
             startActivity(new Intent(SearchActivity.this, MapsActivity.class));
             }
