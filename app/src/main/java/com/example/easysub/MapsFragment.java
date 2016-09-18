@@ -41,12 +41,31 @@ public class MapsFragment extends Fragment {
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
 
-                // For dropping a marker at a point on the Map
-                LatLng waterloo = new LatLng(43.4723, -80.5449);
-                googleMap.addMarker(new MarkerOptions().position(waterloo).title("University of Waterloo").snippet("FOR RENT"));
+                //if this is checked
+                    // For dropping a marker at a point on the Map
+                    LatLng uwaterloo = new LatLng(43.4723, -80.5449);
+                    googleMap.addMarker(new MarkerOptions().position(uwaterloo).title("University of Waterloo").snippet("FOR RENT"));
+                    // For zooming automatically to the location of the marker
+                    CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
+               // else if this is checked
+                    LatLng lester = new LatLng(43.472745,80.533844);
+                    googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
+                    // For zooming automatically to the location of the marker
+                   // CameraPosition cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();
+                //else if this is checked
+                    LatLng laurier = new LatLng(43.472130,80.525179);
+                    googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker
+                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(laurier).zoom(12).build();
+                //else if this is checked
+                    LatLng uptown = new LatLng(43.472130,80.525179);
+                    googleMap.addMarker(new MarkerOptions().position(uptown).title("17 Young Street East").snippet("Not THAT far"));// For zooming automatically to the location of the marker
+                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(uptown).zoom(12).build();
+                //else
+                    LatLng keats = new LatLng(43.472130,80.525179);
+                    googleMap.addMarker(new MarkerOptions().position(keats).title("111 Keats Way Place").snippet("Nice place"));// For zooming automatically to the location of the marker
+                    //CameraPosition cameraPosition = new CameraPosition.Builder().target(keats).zoom(12).build();
+                //end
 
-                // For zooming automatically to the location of the marker
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(waterloo).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
         });
