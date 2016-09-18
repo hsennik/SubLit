@@ -7,7 +7,7 @@ import android.view.View;
 /**
  * Created by Lenavo on 2016-09-17.
  */
-public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
+public class SettingsActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
