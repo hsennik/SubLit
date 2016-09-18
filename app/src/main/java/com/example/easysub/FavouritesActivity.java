@@ -33,24 +33,18 @@ public class FavouritesActivity extends Activity {
         listView = (ListView) findViewById(R.id.list);
 
         // Defined Array values to show in ListView
-        String[] values = new String[] { "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View"
-        };
+        String[] favSubletsName = new String[] { "Address","Address","Address","Address","Address"};
+        Boolean [] favSubletsBool = new Boolean[]{true,false,false,true,false,};  //HARD CODED FAVOURITES, CHANGE TO MODIFY BASED ON USER INPUT IN SEARCH TAB
+       // String[] favSubletsName;
+
 
         // Define a new Adapter
         // First parameter - Context
         // Second parameter - Layout for the row
         // Third parameter - ID of the TextView to which the data is written
         // Forth - the Array of data
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+                android.R.layout.simple_list_item_1, android.R.id.text1, favSubletsName);
 
 
         // Assign adapter to ListView
