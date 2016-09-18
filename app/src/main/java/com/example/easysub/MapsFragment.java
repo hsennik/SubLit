@@ -47,14 +47,14 @@ public class MapsFragment extends Fragment {
                 LatLng laurier = new LatLng(43.472295, -80.525170);
                 LatLng uptown = new LatLng(43.468747, -80.522165);
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
-                if ((Global.decidingvar==1)||(Global.decidingvar==6)) {
+                if (Global.decidingvar==1) {
                     // For dropping a marker at a point on the Map
                     Marker m1 = googleMap.addMarker(new MarkerOptions().position(uwaterloo).title("University of Waterloo").snippet("FOR RENT"));
                     Marker m2 = googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
                     // For zooming automatically to the location of the marker
                     //CameraPosition cameraPosition = new CameraPosition.Builder().target(uwaterloo).zoom(12).build();
                 }
-                if ((Global.decidingvar==2)||(Global.decidingvar==6)){
+                if (Global.decidingvar==2){
                     Marker m2 = googleMap.addMarker(new MarkerOptions().position(lester).title("203 Lester Street").snippet("PARTY CENTRAL"));
                     // For zooming automatically to the location of the marker
                     cameraPosition = new CameraPosition.Builder().target(lester).zoom(12).build();}
@@ -62,7 +62,7 @@ public class MapsFragment extends Fragment {
                     Marker m3= googleMap.addMarker(new MarkerOptions().position(keats).title("111 Keats Way Place").snippet("Nice place"));// For zooming automatically to the location of the marker
                     cameraPosition = new CameraPosition.Builder().target(keats).zoom(12).build();
                 }
-                if((Global.decidingvar==4)||(Global.decidingvar==6)){
+                if(Global.decidingvar==4){
                     //else if this is checked
 
                     Marker m4 = googleMap.addMarker(new MarkerOptions().position(laurier).title("16 Ezra Avenue").snippet("St. Patties..."));// For zooming automatically to the location of the marker

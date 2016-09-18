@@ -7,8 +7,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUBLET 1"
-        android:id="@+id/mysublet_button"
+        android:text="203 Lester Street"
+        android:id="@+id/lester_button"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.22" />
 

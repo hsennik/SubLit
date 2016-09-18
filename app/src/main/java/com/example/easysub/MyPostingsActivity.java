@@ -15,10 +15,10 @@ public class MyPostingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypostings);
 
-        Button btn_mysublet = (Button) findViewById(R.id.mysublet_button);
+        Button btn_mysublet = (Button) findViewById(R.id.lester_button);
         btn_mysublet.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                startActivity(new Intent(MyPostingsActivity.this, PostingActivity.class));}
+                startActivity(new Intent(MyPostingsActivity.this, MyOnePostingActivity.class));}
         });
     }
 }
